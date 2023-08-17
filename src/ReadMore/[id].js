@@ -1,15 +1,16 @@
-/* eslint-disable no-template-curly-in-string */
+/* eslint-disable no-restricted-globals */
+
 /* eslint-disable jsx-a11y/alt-text */
 
 import HomeHeader from "./header";
 
 
 /* eslint-disable no-unused-vars */
-
-  const res = await fetch('https://dummyjson.com/products');
+let url = location.pathname.split('/');
+  const res = await fetch('https://dummyjson.com/products/' + url[2] );
 const json = await res.json();
-console.log(json);
-  export default function Home() {
+console.log(url[2]);
+  export default function Read() {
     return (
       <div className="bg-gray-100 "><HomeHeader title={"Products"}/>
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -20,11 +21,7 @@ console.log(json);
               <div key={product.id}>
                 <div className="relative">
                   <div className="relative h-72 w-full overflow-hidden rounded-lg">
-                   {product?.images.map((image,i) => ( <img
-                      src={image}
-                    //   alt={product.imageAlt}
-                      className="h-full w-full object-cover object-center"
-                    />  ))}
+                  
                   </div>
                   <div className="relative h-40 mt-4">
                     <h3 className="text-sm font-medium text-gray-900">{product.title}</h3>
@@ -40,7 +37,7 @@ console.log(json);
                 </div>
                 <div className="mt-6">
                   <a
-                    href={`/ReadMore/${product.id}`}
+                    href={product.href}
                     className="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200"
                   >
                     Read More
