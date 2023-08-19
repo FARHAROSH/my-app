@@ -51,10 +51,10 @@ let navigation = [
                 <div className="flex items-center flex-grow flex-shrink-0 xl:flex-grow-0">
                   <div className="flex ml-2 items-center justify-between w-full xl:w-auto">
                     <div className="flex inline ">
-                      {/* <a >
+                      <a >
                        
-                        <img className="h-5 w-10 mt-2 sm:mt-0 sm:h-[40px] sm:w-14" src="/Icon.png" alt="" />
-                      </a> */}
+                        <img className="h-5 w-5 rounded-full mt-2 sm:mt-0 sm:h-[40px] sm:w-[40px]" src="/Icon.png" alt="" />
+                      </a>
                       <div>
                         <div className="ml-5 text-xl sm:text-2xl mt-1    font-semibold   text-indigo-900">
                           <p> GLIDIX
