@@ -27,7 +27,7 @@ console.log(json);
                     /> 
                      {/* ))} */}
                   </div>
-                  <div className="relative h-[200px] mt-4 px-1 ">
+                  <div className="relative h-[250px] mt-4 px-1 ">
                     <h3 className="text-lg font-medium text-gray-900">{product.title}</h3>
                     <p className="mt-1 text-sm text-gray-500">{product.description}</p>
                     <div className="text-center mt-5 ">   <p className="mt-1 text-sm font-medium text-gray-800 text-gray-500">Brand  : {product.brand}</p><p className="mt-1 text-sm font-medium text-gray-800 text-gray-500">Discount : {product.discountPercentage}</p>
