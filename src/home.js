@@ -27,14 +27,14 @@ console.log(json);
                     /> 
                      {/* ))} */}
                   </div>
-                  <div className="relative h-[250px] mt-4 px-1 ">
+                  <div className="relative h-[100px] mt-4 px-1 ">
                     <h3 className="text-lg font-medium text-gray-900">{product.title}</h3>
                     <p className="mt-1 text-sm text-gray-500">{product.description}</p>
-                    <div className="text-center mt-5 ">   <p className="mt-1 text-sm font-medium text-gray-800 text-gray-500">Brand  : {product.brand}</p><p className="mt-1 text-sm font-medium text-gray-800 text-gray-500">Discount : {product.discountPercentage}</p>
+                    {/* <div className="text-center mt-5 ">   <p className="mt-1 text-sm font-medium text-gray-800 text-gray-500">Brand  : {product.brand}</p><p className="mt-1 text-sm font-medium text-gray-800 text-gray-500">Discount : {product.discountPercentage}</p>
                     <p className="mt-1 text-sm font-medium text-gray-800 text-gray-500">Rating : {product.rating}</p>
                     <p className="mt-1 text-sm font-medium text-gray-800 text-gray-500">Stock  : {product.stock}</p>
                  
-</div>
+</div> */}
                     
                   </div>
                   <div className="absolute inset-x-0 top-0 flex h-[300px] items-end justify-end overflow-hidden rounded-lg p-4">

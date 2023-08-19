@@ -34,7 +34,7 @@ let navigation = [
   return (
     <div className="relative bg-green-200 overflow-hidden">
       <div className="">
-        <div className="relative z-10 pb-8 bg-blue-800 sm:pb-8 ">
+        <div className="relative z-10 pb-8 bg-gray-100 sm:pb-2 ">
           {/* <svg
             className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
             fill="currentColor"
@@ -46,17 +46,17 @@ let navigation = [
           </svg> */}
 
           <Popover>
-            <div className=" pt-4 px-4 sm:px-6 lg:px-3">
+            <div className=" pt-2 px-4 sm:px-6 lg:px-3">
               <nav className="relative flex items-center justify-between sm:h-10 " aria-label="Global">
                 <div className="flex items-center flex-grow flex-shrink-0 xl:flex-grow-0">
                   <div className="flex ml-2 items-center justify-between w-full xl:w-auto">
                     <div className="flex inline ">
-                      <a >
+                      {/* <a >
                        
                         <img className="h-5 w-10 mt-2 sm:mt-0 sm:h-[40px] sm:w-14" src="/Icon.png" alt="" />
-                      </a>
+                      </a> */}
                       <div>
-                        <div className="ml-5 text-xl sm:text-2xl mt-1 italic   font-semibold  text-white">
+                        <div className="ml-5 text-xl sm:text-2xl mt-1    font-semibold   text-indigo-900">
                           <p> GLIDIX
                         TECHNOLOGIES</p>
                         </div>
@@ -77,7 +77,7 @@ onClick={() => toggleTab(tabIdx)}
                                    key={item.name}
                       href={item.href}
                       className={classNames(item.current ?
-                        ' p-2 no-underline bg-blue-700 text-white' : 'p-2 mr-8 italics  no-underline text-white hover:bg-gray-200 hover-text-white')}
+                        ' p-2 no-underline bg-blue-700 text-white' : 'p-2 mr-8  no-underline  text-indigo-900 hover:bg-gray-200 hover-text-white')}
                         aria-current={item.current ? 'page' : undefined}
                     >
                       {/* //  className={classNames(
