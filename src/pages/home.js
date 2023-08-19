@@ -1,16 +1,23 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable jsx-a11y/alt-text */
 
 
 import React from "react";
+import { useNavigate } from "react-router";
+import HomeHeader from "../header";
 /* eslint-disable no-unused-vars */
 
   const res = await fetch('https://dummyjson.com/products');
 const json = await res.json();
 console.log(json);
-  export default function Home1() {
+  export default function HomeNew() {
+    const navigate=useNavigate();
+    function ReadMore(e){
+        navigate(`pages/ReadMore/${e}`)
+    }
     return (
-      <div className="bg-white ">
+      <div className="bg-white "><HomeHeader/>
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8">
           <div className="text-5xl font-semibold text-center mt-2 mb-8 text-gray-300">Products</div>
   
@@ -42,16 +49,17 @@ console.log(json);
                       aria-hidden="true"
                       className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"
                     />
-                    <p className="relative text-lg font-semibold text-white">price: {product.price}</p>
+                    <p className="relative text-lg font-semibold text-gray-900">price: {product.price}</p>
                   </div>
                 </div>
-                <div className="mt-6">
-                  {/* <a
-                    href={`/ReadMore/${product.id}`}
+                <div className="mt-2">
+                  <a
+                  onClick={(e)=>ReadMore(product.id)}
+                                    //   href={`pages/ReadMore/${product.id}`}
                     className="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200"
                   >
                     Read More
-                  </a> */}
+                  </a>
                 </div>
               </div>
             ))}
