@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 
 /* eslint-disable eqeqeq */
 
@@ -27,13 +28,13 @@ let navigation = [
 //   { name: 'Services', href: '/ourServices', current: title == 'Services' },
   // { name: 'Blogs', href: '/blog' },
   { name: 'Products', href: '/home', current: title == 'Products' },
-  { name: 'Carts', href: '/carts', current: title == 'Carts' },
-  { name: 'Portfolio', href: '/prtfolio', current: title == 'Portfolio' },
+  // { name: 'Carts', href: '/carts', current: title == 'Carts' },
+  // { name: 'Portfolio', href: '/prtfolio', current: title == 'Portfolio' },
 ];
   return (
     <div className="relative bg-green-200 overflow-hidden">
       <div className="">
-        <div className="relative z-10 pb-8 bg-white sm:pb-8 ">
+        <div className="relative z-10 pb-8 bg-blue-800 sm:pb-8 ">
           {/* <svg
             className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
             fill="currentColor"
@@ -45,17 +46,17 @@ let navigation = [
           </svg> */}
 
           <Popover>
-            <div className=" pt-6 px-4 sm:px-6 lg:px-8">
+            <div className=" pt-4 px-4 sm:px-6 lg:px-3">
               <nav className="relative flex items-center justify-between sm:h-10 " aria-label="Global">
                 <div className="flex items-center flex-grow flex-shrink-0 xl:flex-grow-0">
-                  <div className="flex ml-5 items-center justify-between w-full xl:w-auto">
+                  <div className="flex ml-2 items-center justify-between w-full xl:w-auto">
                     <div className="flex inline ">
-                      <a href="/">
-                        <span className="sr-only">Workflow</span>
-                        <img className="h-10 w-10 mt-2 sm:mt-0 sm:h-14 sm:w-14" src="/Icon.png" alt="" />
+                      <a >
+                       
+                        <img className="h-5 w-10 mt-2 sm:mt-0 sm:h-[40px] sm:w-14" src="/Icon.png" alt="" />
                       </a>
                       <div>
-                        <div className="ml-2 text-xl sm:text-2xl  mt-4 font-bold  text-indigo-900">
+                        <div className="ml-5 text-xl sm:text-2xl mt-1 italic   font-semibold  text-white">
                           <p> GLIDIX
                         TECHNOLOGIES</p>
                         </div>
@@ -76,7 +77,7 @@ onClick={() => toggleTab(tabIdx)}
                                    key={item.name}
                       href={item.href}
                       className={classNames(item.current ?
-                        ' p-2 no-underline bg-blue-700 text-white' : 'p-2 no-underline text gray-300 hover:bg-gray-200 hover-text-white')}
+                        ' p-2 no-underline bg-blue-700 text-white' : 'p-2 mr-8 italics  no-underline text-white hover:bg-gray-200 hover-text-white')}
                         aria-current={item.current ? 'page' : undefined}
                     >
                       {/* //  className={classNames(

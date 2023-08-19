@@ -12,7 +12,7 @@ const json = await res.json();
 console.log(url[2]);
   export default function Read() {
     return (
-      <div className="bg-gray-100 "><HomeHeader title={"Products"}/>
+      <div className="bg-gray-100 "><HomeHeader />
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <div className="text-5xl font-semibold text-center mt-2 mb-8 text-gray-300">Products</div>
   
